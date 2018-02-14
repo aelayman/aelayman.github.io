@@ -1,5 +1,6 @@
 body {
-    background-color: #F6F6F6
+    background-color: #F6F6F6;
+    margin-bottom: 20px;
   }
   
   #backgroundImage {
@@ -109,6 +110,28 @@ body {
     font-family: 'Space Mono', monospace;
     text-align: center;
     color: black;
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .portfolio-item {
+    border: 1px black solid;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 6px;
+    /* display: inline-block;
+    width: 400px; */
+  }
+
+  .porfolio-img:hover {
+    opacity: 0.5;
+  }  
+
+  .porfolio-img {
+    width: 100%;
+
   }
   
   #contactTitle {
