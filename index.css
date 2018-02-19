@@ -105,7 +105,7 @@ body {
     color: black;
   }
   
-  #portfolioSection {
+  /* #portfolioSection {
     margin-bottom: 100px;
     font-family: 'Space Mono', monospace;
     text-align: center;
@@ -114,24 +114,81 @@ body {
     justify-content: center;
     margin-left: 40px;
     margin-right: 40px;
-  }
+  } */
 
-  .portfolio-item {
+  /* .portfolio-item {
     border: 1px black solid;
     padding: 15px;
     margin: 5px;
     border-radius: 6px;
     /* display: inline-block;
     width: 400px; */
-  }
+  /*} */
 
-  .porfolio-img:hover {
+  /* .porfolio-img:hover {
     opacity: 0.5;
   }  
 
   .porfolio-img {
     width: 100%;
 
+  } */
+
+  #portfolioSection {
+    margin-bottom: 100px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    color: black;
+    /* display: flex; */
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  #carousel {
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .portfolio-item {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 800px;
+  }
+
+  .porfolio-img {
+    max-width: 100%;
+    max-height: 400px;
+  }
+  .porfolio-img:hover {
+    opacity: 0.5;
+  }  
+
+  .portfolio-item-text {
+    margin-top: 16px;
+  }
+  
+  .portfolio-item-title {
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .portfolio-item-desc {
+    font-style: italic;
+  }
+
+  .portfolio-links {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .portfolio-github {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .portfolio-item-github {
+    font-family: 'Space Mono', monospace;
   }
   
   #contactTitle {
@@ -187,6 +244,8 @@ body {
     color: black;
     line-height: 50px;
     margin-right: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
   @media (max-width: 500px) {
