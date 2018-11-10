@@ -12,7 +12,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -55,10 +55,41 @@
         <a href="mailto:ann@hopplotter.com">ann@hopplotter.com</a>
     </div>
     <img id="sectionDivider2" src="https://i.imgur.com/ITkVuOc.jpg">
-    <div id="portfolioTitle">Cities
+    <div id="portfolioTitle">Cities I've been to
+    </div>
+    <div id='map' style='width: 800px; height: 600px; margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 85px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWVsYXltYW4iLCJhIjoiWEdfQ0NVYyJ9.rp7NwxUIUgCkKbvn3CiIhg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/aelayman/cjoc03tkw0yy52rqkjel6cdfm',
+            center: [-74.00584, 40.713238],
+            zoom: 1
+        });
+
+        map.on('click', function(e) {
+            var features = map.queryRenderedFeatures(e.point, {
+                layers: ['cities-ive-visited']
+        });
+        if (!features.length) {
+            return;
+        }
+
+        var feature = features[0];
+
+        var popup = new mapboxgl.Popup({ offset: [0, -15] })
+            .setLngLat(feature.geometry.coordinates)
+            .setHTML('<p>' + feature.properties.name + '</p>')
+            .setLngLat(feature.geometry.coordinates)
+            .addTo(map);
+        });
+
+    </script>
+    <div id="portfolioTitle">Portfolio
     </div>
 
-    <div id="portfolioTitle">Portfolio
     <div id="portfolioSection">
         <div id="carousel">
             <div class="portfolio-item">
